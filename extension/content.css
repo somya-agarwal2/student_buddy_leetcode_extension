@@ -1,0 +1,53 @@
+/* Styles for LeetCode page integration */
+
+#student-buddy-fab {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+#student-buddy-fab:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#student-buddy-helper {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#student-buddy-helper button {
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+#student-buddy-helper button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the floating button doesn't interfere with LeetCode's UI */
+#student-buddy-fab {
+    pointer-events: auto;
+}
+
+/* Hide helper panel on small screens */
+@media (max-width: 768px) {
+    #student-buddy-helper {
+        display: none;
+    }
+}
